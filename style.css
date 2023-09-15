@@ -22,12 +22,21 @@ body{
     background-size: cover;
     background-position: center;
 } 
+#header::before{
+    content: '';
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 header{
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
 }
 
 nav{
@@ -35,6 +44,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 1000;
 }
 
 .logo{
@@ -160,7 +171,6 @@ nav ul li a:hover::after{
 
 #portfolio{
     padding: 50px 0;
-
 }
 
 .project-list{
@@ -367,4 +377,7 @@ nav .fas{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.header-text h1, .header-text h2, .header-text p{
+    color: #000;
 }
